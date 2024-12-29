@@ -2,3 +2,30 @@ BackEnd/venv/
 
 
 venv/
+
+# Ignore virtual environment in the BackEnd directory
+BackEnd/venv/
+
+# Ignore SQLite database
+BackEnd/db.sqlite3
+
+# Ignore Django static files
+BackEnd/staticfiles/
+
+# Ignore Python bytecode
+BackEnd/__pycache__/
+BackEnd/**/*.py[cod]
+
+# Ignore environment variables
+BackEnd/.env
+BackEnd/.env.*
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
