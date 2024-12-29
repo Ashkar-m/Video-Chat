@@ -151,4 +151,5 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': False,
 }
 
+AUTH_USER_MODEL = 'customer.CustomUser'
 
