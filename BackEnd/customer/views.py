@@ -5,9 +5,6 @@ from rest_framework.views import APIView
 from rest_framework import status
 from .serializers import UserRegistrationSerializer
 
-@api_view(["GET"])
-def test_view(request):
-    return Response({"message": "Hello, World!"})
 
 class UserRegistrationView(APIView):
     def post(self, request, *args, **kwargs):
