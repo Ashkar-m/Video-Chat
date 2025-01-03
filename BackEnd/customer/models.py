@@ -34,6 +34,7 @@ class CustomUser(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     profile_pic = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    date_joined = models.DateTimeField(default= timezone.now)
 
     objects = CustomUserManager()
 
