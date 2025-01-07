@@ -25,7 +25,7 @@ const Register = () => {
         validationSchema,
         onSubmit: async (values, { resetForm, setSubmitting, setFieldError }) => {
             try {
-                const response = await axios.post('http://127.0.0.0.1:8000/register/', {
+                const response = await axios.post('http://127.0.0.1:8000/register/', {
                     email: values.email,
                     password: values.password,
                 });
@@ -38,42 +38,6 @@ const Register = () => {
             }
         }
     })
-    // const [formData, setFormData] = useState({
-    //     email: '',
-    //     password: '',
-    //     confirmPassword: '',
-    // });
-    // const [message, setMessage] = useState('');
-    // const [error, setError] = useState('');
-
-    // const handleChange = (e) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.name]: e.target.value,
-    //     });
-    // };
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setMessage('');
-    //     setError('');
-
-    //     if (formData.password !== formData.confirmPassword) {
-    //         setError("Passwords do not match.");
-    //         return;
-    //     }
-
-    //     try {
-    //         const response = await axios.post('/api/register', {
-    //             email: formData.email,
-    //             password: formData.password,
-    //         });
-    //         setMessage(response.data.message);
-    //         setFormData({ email: '', password: '', confirmPassword: '' });
-    //     } catch (err) {
-    //         setError(err.response?.data?.detail || 'Registration failed. Please try again.');
-    //     }
-    // };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
