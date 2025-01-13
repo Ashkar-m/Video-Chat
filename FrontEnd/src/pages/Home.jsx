@@ -12,6 +12,9 @@ function getUser(){
 }
 
 const Home = () => {
+
+    // Need to setup the page according to api configuration
+    
     const [user, setUser] = useState(getUser());
 
     const handleLogout = () => {
