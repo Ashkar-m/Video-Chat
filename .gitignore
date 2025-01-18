@@ -9,6 +9,7 @@ BackEnd/venv/
 # Ignore SQLite database
 BackEnd/db.sqlite3
 
+
 # Ignore Django static files
 BackEnd/staticfiles/
 

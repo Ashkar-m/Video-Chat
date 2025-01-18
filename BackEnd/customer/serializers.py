@@ -40,3 +40,17 @@ class UserRegistrationSerializer(serializers.Serializer):
 
         user = User.objects.create_user(username=username, email=email, password=password)
         return user
+
+
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField(write_only=True, style={"input_type": "password"})
+
+    def validate(self, data):
+        email = data.get("email")
+        password = data.get("password")
+
+        if not email or not password:
+            raise serializers.ValidationError("Both email and password are required")
+        
+        return data
