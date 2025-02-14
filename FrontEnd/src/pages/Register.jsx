@@ -4,7 +4,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Register = () => {
-    // need to add email exists in front end
     const validationSchema = Yup.object({
         email: Yup.string()
         .email('Invalid email address')

@@ -14,6 +14,8 @@ function getUser(){
 const Home = () => {
 
     // Need to setup the page according to api configuration
+
+    // Refer the tutorial to complete the project
     
     const [user, setUser] = useState(getUser());
 
