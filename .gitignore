@@ -32,3 +32,5 @@ Thumbs.db
 *.sublime-workspace
 
 BackEnd/BackEnd/__pycache__
+
+BackEnd/profile_pics
