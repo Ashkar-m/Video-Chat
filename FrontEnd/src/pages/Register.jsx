@@ -28,11 +28,14 @@ const Register = () => {
                 const response = await axios.post('http://127.0.0.1:8000/register/', {
                     email: values.email,
                     password: values.password,
+                    confirm_password: values.confirmPassword,
                 });
                 alert(response.data.message);
                 resetForm();
             } catch (error) {
                 setFieldError('email', error.response?.data?.detail || 'Registration failed. Please try again');
+                console.log(error.response);
+                
             } finally {
                 setSubmitting(false);
             }
